@@ -3,6 +3,9 @@ title: "googleplay-review-scrapper"
 description: "Google Play review scrapper integrated with Qiscus custom channel"
 date: "Mar 18 2022"
 repoURL: "https://github.com/syahidfrd/googleplay-review-scrapper"
+tags:
+  - Python
+  - Scrapper
 ---
 
 Google Play review scrapper integrated with [Qiscus](https://qiscus.com) custom channel

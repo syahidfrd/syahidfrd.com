@@ -3,6 +3,10 @@ title: "asynqmon-handler"
 description: "Asynqmon handler with basic auth"
 date: "Mar 18 2022"
 repoURL: "https://github.com/syahidfrd/asynqmon-handler"
+tags:
+  - Golang
+  - Asynqmon
+  - Auth
 ---
 
 ### Docker image

@@ -3,6 +3,8 @@ title: "How I Simplify Tech Concepts with Analogy Content"
 description: "Bridging the gap between tech and understanding."
 date: "Sep 17 2024"
 draft: false
+tags:
+  - Other
 ---
 
 As a software engineer, I often find myself explaining complex tech concepts to people who may not have a technical background. This can sometimes be challenging, as the world of technology is filled with jargon and intricate details that aren’t always easy to grasp for those outside the field. This is where **analogies** come in as a powerful tool.

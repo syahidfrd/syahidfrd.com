@@ -1,8 +1,10 @@
 ---
 title: "Function Declaration v.s. Expression pada JavaScript"
-description: "Perbedaan utama antara fungsi deklarasi dan ekspresi pada JavaScript"
+description: "Perbedaan antara function declaration dan Expression pada JavaScript."
 date: "Apr 19 2020"
 draft: false
+tags:
+  - JavaScript
 ---
 
 Pada Javascript, dikenal dua jenis fungsi yaitu Function Decalration dan Function Expression, yang mana keduanya memiliki fungsi yang sama seperti fungsi pada umumnya yaitu untuk mengeksekusi beberapa block code dan menghasilkan nilai, lalu apa yang membedakan dua jenis fungsi tersebut? 🤔

@@ -3,6 +3,10 @@ title: "go-boilerplate"
 description: "REST API boilerplate built with Go - Echo Framework"
 date: "Mar 18 2021"
 repoURL: "https://github.com/syahidfrd/go-boilerplate"
+tags:
+  - Golang
+  - Echo
+  - Boilerplate
 ---
 
 ### Directory Structure
