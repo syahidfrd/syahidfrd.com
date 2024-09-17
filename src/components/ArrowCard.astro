@@ -16,11 +16,9 @@ const { entry } = Astro.props;
     <div class="text-sm">
       {entry.data.description}
     </div>
-    <div class="mt-3 flex flex-wrap gap-2 text-xs">
-        {entry.data.tags.map((tag, index) => (
-        <span key={index} class="">
-            #{tag}
-        </span>
+    <div class="mt-3 flex flex-wrap gap-2">
+        {entry.data.tags.map((tag) => (
+          <span class="text-xs">#{tag}</span>
         ))}
     </div>
   </div>
