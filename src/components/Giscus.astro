@@ -43,7 +43,7 @@ document.addEventListener("astro:page-load", function () {
 
   const giscusScript = document.createElement("script");
   Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
-  document.body.appendChild(giscusScript);
+  document.getElementById("comment")?.appendChild(giscusScript);
 
   const themeButtons = ['#light-theme-button', '#dark-theme-button'];
   themeButtons.forEach(selector => {
