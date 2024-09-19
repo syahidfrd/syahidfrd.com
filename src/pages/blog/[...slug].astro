@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
+import Giscus from "@components/Giscus.astro"
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog"))
@@ -44,6 +45,9 @@ const { Content } = await post.render();
     </div>
     <article class="animate">
       <Content />
+      <div class="mt-24">
+        <Giscus />
+      </div>
     </article>
   </Container>
 </PageLayout>

@@ -7,5 +7,3 @@ tags:
   - RAG
   - Golang
 ---
-
-Todo...

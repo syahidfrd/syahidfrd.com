@@ -1,0 +1,54 @@
+<div class="giscus"></div>
+
+<script>
+function getGiscusTheme() {
+  const theme = localStorage.getItem("theme");
+  const giscusTheme = theme == null || theme == "light" ? "light" : "dark";
+  return giscusTheme;
+}
+
+function setGiscusTheme() {
+  function sendMessage(message) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+
+  sendMessage({
+    setConfig: {
+      theme: getGiscusTheme() == "dark" ? "dark": "light",
+    },
+  });
+}
+
+document.addEventListener("astro:page-load", function () {
+  const giscusAttributes = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": "syahidfrd/syahidfrd.com",
+      "data-repo-id": "R_kgDOMyw1_Q",
+      "data-category": "General",
+      "data-category-id": "DIC_kwDOMyw1_c4Cil90",
+      "data-mapping": "pathname",
+      "data-strict": "0",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "bottom",
+      "data-theme": getGiscusTheme(),
+      "data-lang": "en",
+      "crossorigin": "anonymous",
+      "async": "",
+  };
+
+  const giscusScript = document.createElement("script");
+  Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+  document.body.appendChild(giscusScript);
+
+  const themeButtons = ['#light-theme-button', '#dark-theme-button'];
+  themeButtons.forEach(selector => {
+    const button = document.querySelector(selector);
+    if (button) {
+      button.addEventListener("click", setGiscusTheme);
+    }
+  });
+});
+</script>
