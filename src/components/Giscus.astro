@@ -3,8 +3,7 @@
 <script>
 function getGiscusTheme() {
   const theme = localStorage.getItem("theme");
-  const giscusTheme = theme == null || theme == "light" ? "light" : "dark";
-  return giscusTheme;
+  return theme === "dark" ? "dark" : "light";
 }
 
 function setGiscusTheme() {
@@ -45,7 +44,7 @@ document.addEventListener("astro:page-load", function () {
   Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
   document.getElementById("comment")?.appendChild(giscusScript);
 
-  const themeButtons = ['#light-theme-button', '#dark-theme-button'];
+  const themeButtons = ["#light-theme-button", "#dark-theme-button", "#system-theme-button"];
   themeButtons.forEach(selector => {
     const button = document.querySelector(selector);
     if (button) {
