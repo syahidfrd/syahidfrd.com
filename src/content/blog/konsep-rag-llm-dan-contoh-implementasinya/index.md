@@ -512,4 +512,4 @@ Akhirnya, sistem mengirimkan respons yang telah dihasilkan kembali ke user.
 
 ### Penutup
 
-Tentu, masih banyak yang bisa kita tingkatkan dari praktik yang sudah dilakukan agar aplikasi benar-benar siap untuk digunakan di lingkungan production. Fokus utama kita adalah merancang pipeline RAG dengan langsung menguraikan komponen-komponen pentingnya dan meminimalkan lapisan abstraksi yang ada pada beberapa framework.Source code lengkapnya bisa dilihat di [https://github.com/syahidfrd/rago](https://github.com/syahidfrd/rago).
+Tentu, masih banyak yang bisa kita tingkatkan dari praktik yang sudah dilakukan agar aplikasi benar-benar siap untuk digunakan di lingkungan production. Fokus utama kita adalah merancang pipeline RAG dengan langsung menguraikan komponen-komponen pentingnya dan meminimalkan lapisan abstraksi yang ada pada beberapa framework. Source code lengkapnya bisa dilihat di [https://github.com/syahidfrd/rago](https://github.com/syahidfrd/rago).
