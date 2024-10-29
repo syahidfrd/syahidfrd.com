@@ -407,7 +407,7 @@ package main
 func main() {
 	...
 	query := "Siapakah presiden Indonesia 2024?"
-	queryEmbeddings, err := generateEmbeddings(question)
+	queryEmbeddings, err := generateEmbeddings(query)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -512,4 +512,4 @@ Akhirnya, sistem mengirimkan respons yang telah dihasilkan kembali ke user.
 
 ### Penutup
 
-Tentu, masih banyak yang bisa kita improve dari praktik yang sudah kita lakukan hingga aplikasi siap untuk dipakai di lingkungan production. Kita berusaha untuk mengekstrak pipeline yang ada dalam proses RAG secara langsung, dengan mengurangi lapisan abstraksi dari beberapa framework yang ada. Source code lengkapnya bisa dilihat di [https://github.com/syahidfrd/rago](https://github.com/syahidfrd/rago).
+Tentu, masih banyak yang bisa kita tingkatkan dari praktik yang sudah dilakukan agar aplikasi benar-benar siap untuk digunakan di lingkungan production. Fokus utama kita adalah merancang pipeline RAG dengan langsung menguraikan komponen-komponen pentingnya dan meminimalkan lapisan abstraksi yang ada pada beberapa framework.Source code lengkapnya bisa dilihat di [https://github.com/syahidfrd/rago](https://github.com/syahidfrd/rago).
