@@ -98,7 +98,7 @@ Mari kita coba tanya ke OpenAI terkait siapa presiden Indonesia yang sekarang.
 ```go
 package main
 
-func main()
+func main() {
 	resp, err := getCompletion("Siapakah presiden Indonesia saat ini?")
 	if err != nil {
 		panic(err.Error())
@@ -117,7 +117,7 @@ Pada saat penulisan blog ini, yaitu tanggal 28 Oktober 2024, posisi Presiden Ind
 ```go
 package main
 
-func main(){
+func main() {
 	...
 	resp, err := getCompletion("Siapakah presiden Indonesia 2024?")
 	...
@@ -247,7 +247,7 @@ func generateEmbeddings(input string) ([]float32, error) {
 
 Di _real case_, kamu bisa mengekstrak teks dari beberapa sumber seperti PDF, WordPress, Markdown dll. Namun, kali ini kita akan melewatkan proses ekstraksi teks _for simplicity_. Penting untuk diingat bahwa ukuran dan kompleksitas dokumen dapat mempengaruhi kualitas embedding yang dihasilkan, sehingga kita perlu menerapkan fungsi `text splitter` untuk memecah teks menjadi bagian-bagian kecil atau disebut `chunk`.
 
-![Splutter](./splitter.webp)
+![Splitter](./splitter.webp)
 
 Chunk ini menyelesaikan masalah yang kita hadapi sebelumnya ketika kita harus menambahkan semua konteks secara manual di sistem prompt, yang bisa menyebabkan biaya tokenisasi tinggi dan hasil yang kurang optimal. Namun, kali ini kita tidak akan membuat metode text splitter yang kompleks. Sebagai gantinya, kita cukup memecah teks menjadi chunk dengan `memisahkan input berdasarkan pemisah paragraf baru`, yaitu `\n\n`.
 
@@ -386,12 +386,12 @@ Kita akan _run through_ setiap langkah yang terdapat dalam diagram di atas secar
 
 #### 1. Pass Query
 
-Proses dimulai ketika `User` mengirimkan query ke sistem. Pada tahap awal, query masih dalam bentuk teks mentah yang perlu diproses lebih lanjut agar dapat digunakan oleh sistem
+Proses dimulai ketika `User` mengirimkan query ke sistem. Pada tahap awal, query masih dalam bentuk teks mentah yang perlu diproses lebih lanjut agar dapat digunakan oleh sistem.
 
 ```go
 package main
 
-func main(){
+func main() {
 	...
 	query := "Siapakah presiden Indonesia 2024?"
 }
