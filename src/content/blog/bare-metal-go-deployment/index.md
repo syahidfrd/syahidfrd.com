@@ -12,7 +12,7 @@ A hands-on guide to deploying Go apps without Docker, CI/CD, or cloud automation
 
 ### Set Up the Server and Configure `systemd`
 
-SSH into your vps server, create the necessary directory for your app.
+SSH into your VPS server, create the necessary directory for your app.
 
 ```bash
 mkdir /var/lib/goapp
@@ -57,7 +57,7 @@ func main() {
 
 ### Build the App
 
-Compile the Go app into a uniquely named binary using a timestamp. Assume your vps server is running Linux on `amd64` architecture.
+Compile the Go app into a uniquely named binary using a timestamp. Assume your VPS server is running Linux on `amd64` architecture.
 
 ```bash
 GOOS=linux GOARCH=amd64 go build -o binary-$(date +%s) main.go
@@ -67,7 +67,7 @@ The output binary will be named like `binary-1685612345`, where the number is th
 
 ### Send the Binary to the Server
 
-Transfer the compiled binary from your local machine to the vps server using `scp`. Assuming your vps server's IP is `123.123.123.123`.
+Transfer the compiled binary from your local machine to the VPS server using `scp`. Assuming your VPS server's IP is `123.123.123.123`.
 
 ```bash
 scp binary-1685612345 root@123.123.123.123:/var/lib/goapp
@@ -75,7 +75,7 @@ scp binary-1685612345 root@123.123.123.123:/var/lib/goapp
 
 ### Manage Binary Versions with a Symlink
 
-Once the new binary is on your vps server at `/var/lib/goapp/`, create or update a symbolic link called latest that points to the current binary version. This lets your systemd service always run the latest binary without changing the service file every time.
+Once the new binary is on your VPS server at `/var/lib/goapp/`, create or update a symbolic link called latest that points to the current binary version. This lets your systemd service always run the latest binary without changing the service file every time.
 
 ```bash
 ln -sfn /var/lib/goapp/binary-1685612345 /var/lib/goapp/latest
@@ -105,7 +105,7 @@ Create the file directly on your VPS and paste the contents of the `chained.pem`
 nano /var/lib/goapp/chained.pem
 ```
 
-Install NGINX on your vps server if you haven't already
+Install NGINX on your VPS server if you haven't already
 
 ```bash
 sudo apt update
