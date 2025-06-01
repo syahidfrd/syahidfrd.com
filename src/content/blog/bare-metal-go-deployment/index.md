@@ -91,17 +91,18 @@ Your app is now accessible at `http://123.123.123.123:8080`.
 
 ### Configure NGINX with Domain and SSL Certificates
 
-Get a free SSL certificate from [gethttpsforfree](http://gethttpsforfree.com/). Follow their steps to generate your domain private key (domain.key) on your vps server, and download the Signed Certificate Chain (chained.pem) to your local machine.
-Then, move the private key to the server’s app directory
+Get a free SSL certificate from [gethttpsforfree](http://gethttpsforfree.com/). Follow their steps to generate your domain private key (domain.key) and Signed Certificate Chain (chained.pem).
+
+Move the private key to the server’s app directory
 
 ```bash
 mv domain.key /var/lib/goapp
 ```
 
-Next, from your local computer, upload the certificate chain to the vps server using `scp`
+Create the file directly on your VPS and paste the contents of the `chained.pem` certificate from your browser output and save the file
 
 ```bash
-scp chained.pem root@123.123.123.123:/var/lib/goapp
+nano /var/lib/goapp/chained.pem
 ```
 
 Install NGINX on your vps server if you haven't already
