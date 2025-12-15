@@ -76,7 +76,7 @@ AI makes both defenders and attackers faster. Speed without control is not progr
 
 ### Securing AI Means Securing the Whole System
 
-At DevFest, I framed AI security across three core risk domains, supported by infrastructure and governance.
+AI security is best approached through three core risk domains, supported by infrastructure and governance.
 
 #### Data Risk: The Largest Attack Surface
 
