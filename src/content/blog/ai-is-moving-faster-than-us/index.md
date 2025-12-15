@@ -40,7 +40,7 @@ When something goes wrong, it is usually because:
 
 Data leaks do not happen because LLMs are evil, they happen because humans route sensitive data through systems they do not fully control.
 
-## The Most Dangerous AI Threat Is Shadow AI
+### The Most Dangerous AI Threat Is Shadow AI
 
 When people hear "AI security", they usually imagine hackers, that is not the main problem. **The biggest AI risk today comes from inside organizations**.
 
